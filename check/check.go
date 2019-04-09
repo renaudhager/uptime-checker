@@ -36,14 +36,13 @@ var CheckCmd = cli.Command{
 	},
 }
 
-func check(c *cli.Context) (err error) {
+func check(c *cli.Context) {
 
 	log := confLogging(c.GlobalString("l"),c.GlobalString("lf"))
 
 	intervalDuration, err := time.ParseDuration(c.String("interval"))
 	if err != nil {
 		log.Error("Error parsing interval.", err)
-		return err
 	}
 
 	for {
@@ -52,7 +51,6 @@ func check(c *cli.Context) (err error) {
 		uptimeLimitDuration, err := time.ParseDuration(c.String("uptime-limit"))
 		if err != nil {
 			log.Error("Error parsing uptime-limit.", err)
-			return err
 		}
 
 		if uptimeDuration > uptimeLimitDuration {
@@ -63,8 +61,6 @@ func check(c *cli.Context) (err error) {
 		time.Sleep(intervalDuration)
 	}
 
-
-	return nil
 }
 
 func touchSentinelFile(filepath string, log *log.Logger) {

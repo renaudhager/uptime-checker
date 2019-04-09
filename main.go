@@ -12,7 +12,6 @@ var version string
 
 // main function
 func main() {
-	version = "alpha"
 	app := cli.NewApp()
 	app.Name = "uptime-checker"
 	app.Usage = "Check uptime, if its above the limit, creates a file."
