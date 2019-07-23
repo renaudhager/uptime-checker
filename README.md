@@ -1,5 +1,7 @@
 # Uptime-checker
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/renaudhager/uptime-checker.svg)](https://hub.docker.com/r/renaudhager/uptime-checker)[![Go Report Card](https://goreportcard.com/badge/github.com/renaudhager/uptime-checker)](https://goreportcard.com/report/github.com/renaudhager/uptime-checker) 
+
 ## Description
 Small tool, that creates a file if uptime exceed a limit.
 
