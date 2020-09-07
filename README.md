@@ -1,6 +1,6 @@
 # Uptime-checker
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/renaudhager/uptime-checker.svg)](https://hub.docker.com/r/renaudhager/uptime-checker)[![Go Report Card](https://goreportcard.com/badge/github.com/renaudhager/uptime-checker)](https://goreportcard.com/report/github.com/renaudhager/uptime-checker) 
+[![Docker Pulls](https://img.shields.io/docker/pulls/renaudhager/uptime-checker.svg)](https://hub.docker.com/r/renaudhager/uptime-checker)[![Go Report Card](https://goreportcard.com/badge/github.com/renaudhager/uptime-checker)](https://goreportcard.com/report/github.com/renaudhager/uptime-checker)
 
 ## Description
 Small tool, that creates a file if uptime exceed a limit.
@@ -38,7 +38,9 @@ USAGE:
    CLI tool to check if uptime is above a specific threshold and touch a file if uptime is above the threshold. check [command options] [arguments...]
 
 OPTIONS:
-   --uptime-limit value  Limit above a file will be created. In time.Duration format. (default: "24h") [$UC_UPTIME_LIMIT]
-   --file value          Path of the file to create. (default: "/var/run/reboot-required") [$UC_FILE_PATH]
-   --interval value      Interval between 2 checks. In time.Duration format. (default: "5m") [$UC_INTERVAL]
+   --uptime-limit value       Limit above a file will be created. In time.Duration format. (default: "24h") [$UC_UPTIME_LIMIT]
+   --file value               Path of the file to create. (default: "/var/run/reboot-required") [$UC_FILE_PATH]
+   --interval value           Interval between 2 checks. In time.Duration format. (default: "5m") [$UC_INTERVAL]
+   --window-start-time value  Window start hour and minute. (default: "00:00") [$UC_WINDOW_START]
+   --window-end-time value    Window end hour and minute. (default: "23:59") [$UC_WINDOW_END]
 ```
